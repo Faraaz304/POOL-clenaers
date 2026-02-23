@@ -38,7 +38,7 @@ const SERVICES: Service[] = [
     icon: <Droplets className="w-6 h-6" />,
     price: "From $149/mo",
     features: ["Skimming & Vacuuming", "Wall Brushing", "Filter Cleaning", "Chemical Balancing"],
-    image: "https://picsum.photos/seed/pool1/800/600"
+    image: "/images/after1.png"
   },
   {
     id: "repair",
@@ -47,7 +47,7 @@ const SERVICES: Service[] = [
     icon: <ShieldCheck className="w-6 h-6" />,
     price: "Quote Required",
     features: ["Pump Replacement", "Leak Detection", "Heater Repair", "Automation Setup"],
-    image: "https://picsum.photos/seed/pool2/800/600"
+    image: "/images/blog-maintenance.png"
   },
   {
     id: "maintenance",
@@ -56,7 +56,7 @@ const SERVICES: Service[] = [
     icon: <CheckCircle2 className="w-6 h-6" />,
     price: "From $89/mo",
     features: ["Water Analysis", "Eco-Friendly Chemicals", "Salt Cell Cleaning", "Conditioner Check"],
-    image: "https://picsum.photos/seed/pool3/800/600"
+    image: "/images/after2.png"
   },
   {
     id: "algae",
@@ -65,7 +65,7 @@ const SERVICES: Service[] = [
     icon: <Clock className="w-6 h-6" />,
     price: "From $299",
     features: ["Shock Treatment", "Algaecide Application", "Flocculation", "Deep Filter Clean"],
-    image: "https://picsum.photos/seed/pool4/800/600"
+    image: "/images/before1.png"
   }
 ];
 
@@ -99,21 +99,21 @@ const BLOG_POSTS: BlogPost[] = [
     excerpt: "Don't wait for a total failure. Learn the early warning signs of pump trouble.",
     date: "Oct 12, 2023",
     category: "Maintenance",
-    image: "https://picsum.photos/seed/blog1/600/400"
+    image: "/images/blog-maintenance.png"
   },
   {
     title: "Eco-Friendly Pool Care: Why It Matters",
     excerpt: "Discover how pet-safe and eco-friendly chemicals protect your family and the environment.",
     date: "Oct 05, 2023",
     category: "Eco-Care",
-    image: "https://picsum.photos/seed/blog2/600/400"
+    image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&h=400&fit=crop"
   },
   {
     title: "Winterizing Your Pool in Florida",
     excerpt: "Everything you need to know about maintaining your pool during the cooler months.",
     date: "Sep 28, 2023",
     category: "Seasonal",
-    image: "https://picsum.photos/seed/blog3/600/400"
+    image: "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=600&h=400&fit=crop"
   }
 ];
 
@@ -161,7 +161,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-8">
-          {["Services", "Gallery", "Testimonials", "FAQ", "Blog"].map((item) => (
+          {["Services", "Testimonials", "FAQ", "Blog"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -187,7 +187,7 @@ const Navbar = () => {
           animate={{ opacity: 1, y: 0 }}
           className="absolute top-full left-0 right-0 bg-white shadow-xl p-6 md:hidden flex flex-col gap-4"
         >
-          {["Services", "Gallery", "Testimonials", "FAQ", "Blog"].map((item) => (
+          {["Services", "Testimonials", "FAQ", "Blog"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -212,7 +212,7 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://picsum.photos/seed/hero-pool/1920/1080"
+          src="/images/hero-pool.png"
           alt="Luxury Pool"
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
@@ -401,7 +401,7 @@ const Gallery = () => {
               <div className="grid grid-cols-2 h-[400px]">
                 <div className="relative overflow-hidden">
                   <img
-                    src={`https://picsum.photos/seed/before${i}/800/1000`}
+                    src={`/images/before${i}.png`}
                     alt="Before"
                     className="w-full h-full object-cover"
                   />
@@ -409,7 +409,7 @@ const Gallery = () => {
                 </div>
                 <div className="relative overflow-hidden">
                   <img
-                    src={`https://picsum.photos/seed/after${i}/800/1000`}
+                    src={`/images/after${i}.png`}
                     alt="After"
                     className="w-full h-full object-cover"
                   />
@@ -584,7 +584,7 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-6">Quick Links</h4>
             <ul className="space-y-4">
-              {["Services", "Gallery", "Testimonials", "FAQ", "Blog"].map((item) => (
+              {["Services", "Testimonials", "FAQ", "Blog"].map((item) => (
                 <li key={item}>
                   <a href={`#${item.toLowerCase()}`} className="text-slate-500 text-sm hover:text-brand-primary transition-colors">{item}</a>
                 </li>
@@ -642,7 +642,7 @@ export default function App() {
       <Navbar />
       <Hero />
       <Services />
-      <Gallery />
+
       <Testimonials />
       <FAQ />
       <Blog />
