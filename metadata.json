@@ -1,0 +1,7 @@
+{
+  "name": "Crystal Clear Pools",
+  "description": "#1 Rated Pool Cleaning & Maintenance Service. Professional, eco-friendly, and pet-safe pool care with transparent pricing.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
